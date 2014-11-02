@@ -27,7 +27,7 @@ def listen():
         event = board.read(999)
         if '∆' in event:
             # Respond to shake by sending a yo to subscribers
-            response = requests.post("http://api.justyo.co/yoall/", data={'api_token': token, 'link': 'http://www.github.com/rrotaru'})
+            response = requests.post("http://api.justyo.co/yoall/", data={'api_token': token, 'link': 'https://github.com/rrotaru/YoMicro'})
             if response.status_code == 201:
                 print "Board shaken! Yo successfully sent to all subscribers."
             elif response.status_code == 400:
